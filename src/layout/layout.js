@@ -1,14 +1,14 @@
 const pageLayout = () => {
-    const content = document.createElement("div");
-    content.id = "#content";
-    document.body.appendChild(content);
+    const page = document.createElement("div");
+    page.id = "#page";
+    document.body.appendChild(page);
 
     const header = document.createElement("div");
     header.classList.add("header");
-    content.appendChild(header);
+    page.appendChild(header);
 
-    const main = document.createElement("div");
-    main.classList.add("main");
-    content.appendChild(main);
+    const content = document.createElement("div");
+    content.classList.add("content");
+    page.appendChild(content);
 };
 export default pageLayout;

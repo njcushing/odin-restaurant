@@ -35,7 +35,7 @@ body {
     height: 100vh;
 }
 
-#content { 
+#page { 
     display: grid;
     grid-template-areas: auto 1fr / 1fr;
 }
