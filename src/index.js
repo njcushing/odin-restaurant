@@ -1,3 +1,9 @@
-import pageLoad from "./page-load.js";
+import pageLayout from "./layout/layout.js";
+import pageHeader from "./header/header.js";
+import "./styles.css";
 
-pageLoad();
+const regenerateTab = () => {
+    pageLayout();
+    pageHeader();
+};
+regenerateTab();
