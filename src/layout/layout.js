@@ -2,7 +2,6 @@ const pageLayout = () => {
     const content = document.querySelector("#content");
     content.style.display = "grid";
     content.style.gridTemplateAreas = "auto 1fr / auto 1fr";
-    content.style.backgroundColor = "red";
 
     const header = document.createElement("div");
     header.classList.add("header");
