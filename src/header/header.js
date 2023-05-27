@@ -9,8 +9,8 @@ const pageHeader = () => {
     header.appendChild(companyName);
 
     const buttonHome = headerNavButton();
+    companyName.classList.add("nav-button-home");
     companyName.textContent = "Home";
-
     header.appendChild(buttonHome);
 };
 export default pageHeader;
