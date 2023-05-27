@@ -61,11 +61,13 @@ body {
     grid-area: 2 / 1 / -1 / -1;
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
     gap: 12px;
     padding-top: 30px;
 }
 
 .header .navigation-bar button {
+    flex-shrink: 0;
     width: 6rem;
     height: 1.6rem;
     border-radius: 9999px;

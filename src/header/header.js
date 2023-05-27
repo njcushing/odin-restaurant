@@ -5,6 +5,7 @@ const pageHeader = () => {
 
     const companyName = document.createElement("h1");
     companyName.classList.add("company-name");
+    companyName.classList.add("no-select");
     companyName.textContent = "Baker's Dozen";
     header.appendChild(companyName);
 
