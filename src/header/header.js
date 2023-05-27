@@ -8,9 +8,23 @@ const pageHeader = () => {
     companyName.textContent = "Baker's Dozen";
     header.appendChild(companyName);
 
+    const navBar = document.createElement("nav");
+    navBar.classList.add("navigation-bar");
+    header.appendChild(navBar);
+
     const buttonHome = headerNavButton();
-    companyName.classList.add("nav-button-home");
-    companyName.textContent = "Home";
-    header.appendChild(buttonHome);
+    buttonHome.classList.add("nav-button-home");
+    buttonHome.textContent = "Home";
+    navBar.appendChild(buttonHome);
+
+    const buttonMenu = headerNavButton();
+    buttonMenu.classList.add("nav-button-menu");
+    buttonMenu.textContent = "Menu";
+    navBar.appendChild(buttonMenu);
+
+    const buttonContact = headerNavButton();
+    buttonContact.classList.add("nav-button-contact");
+    buttonContact.textContent = "Contact";
+    navBar.appendChild(buttonContact);
 };
 export default pageHeader;

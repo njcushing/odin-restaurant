@@ -1,5 +1,7 @@
 const pageLayout = () => {
-    const content = document.querySelector("#content");
+    const content = document.createElement("div");
+    content.id = "#content";
+    document.body.appendChild(content);
 
     const header = document.createElement("div");
     header.classList.add("header");

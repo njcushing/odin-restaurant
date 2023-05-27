@@ -57,6 +57,34 @@ body {
     color: white;
 }
 
+.header .navigation-bar {
+    grid-area: 2 / 1 / -1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 30px;
+}
+
+.header .navigation-bar button {
+    width: 6rem;
+    height: 1.6rem;
+    border-radius: 9999px;
+    font-family: var(--nunito-font-family);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: center;
+    border: none;
+    background-color: rgb(245, 245, 245);
+}
+.header .navigation-bar button:hover {
+    outline: 2px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+.header .navigation-bar button:active {
+    background-color: rgb(221, 221, 221);
+}
+
 .sidebar {
     grid-area: 2 / 1 / -1 / 2;
 }
