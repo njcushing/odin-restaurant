@@ -6,10 +6,17 @@ const quotePanel = () => {
     quote.classList.add("quote-panel-quote");
     panel.appendChild(quote);
 
+    const author = document.createElement("div");
+    author.classList.add("quote-panel-author");
+    panel.appendChild(author);
+
     return panel;
 };
 const quotePanelUpdateQuoteText = (e, text) => {
     e.childNodes[0].textContent = text;
 };
+const quotePanelUpdateAuthor = (e, author) => {
+    e.childNodes[1].textContent = `- ${author}`;
+};
 export default quotePanel;
-export { quotePanelUpdateQuoteText };
+export { quotePanelUpdateQuoteText, quotePanelUpdateAuthor };

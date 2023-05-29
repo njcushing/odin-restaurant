@@ -42,11 +42,8 @@ body {
 
 .header {
     grid-area: 1 / 1 / 2 / -1;
-    display: "grid";
-    grid-template-areas: repeat(2, auto) / 1fr;
     font-family: var(--righteous-font-family);
     background-color: rgb(230, 6, 6);
-    box-shadow: 0px 6px 5px rgba(60, 60, 60, 0.3);
     padding: 20px;
 }
 
@@ -89,4 +86,42 @@ body {
 
 .content {
     grid-area: 2 / 1 / -1 / -1;
+    background-color: #f8e8e8;
+    height: inherit;
+    z-index: 100;
+}
+
+.quote-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: inherit;
+    height: inherit;
+    padding: 20px;
+    gap: 20px;
+}
+
+.quote-panel {
+    flex-shrink: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: 400px;
+    width: 300px;
+    overflow: auto;
+    border: 2px solid rgb(37, 37, 37);
+    border-radius: 10px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0px 6px 5px rgba(60, 60, 60, 0.3);
+    padding: 12px;
+}
+
+.quote-panel .quote-panel-quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+}
+
+.quote-panel .quote-panel-author {
+    font-size: 0.9rem;
+    text-align: end;
 }
