@@ -37,7 +37,7 @@ body {
 
 #page { 
     display: grid;
-    grid-template-areas: auto 1fr / 1fr;
+    grid-template-rows: auto 1fr;
 }
 
 .header {
@@ -51,6 +51,7 @@ body {
     grid-area: 1 / 1 / 2 / -1;
     text-align: center;
     font-size: 1.8rem;
+    white-space: nowrap;
     color: white;
 }
 
@@ -86,9 +87,21 @@ body {
 
 .content {
     grid-area: 2 / 1 / -1 / -1;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
     background-color: #f8e8e8;
     height: inherit;
     z-index: 100;
+}
+
+.opening-line {
+    justify-self: center;
+    font-size: 1.0rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    max-width: 1440px;
+    padding: 20px;
 }
 
 .quote-container {
@@ -105,10 +118,9 @@ body {
     flex-shrink: 0;
     display: grid;
     grid-template-rows: 1fr auto;
-    height: 400px;
+    height: 270px;
     width: 300px;
     overflow: auto;
-    border: 2px solid rgb(37, 37, 37);
     border-radius: 10px;
     background-color: rgb(250, 250, 250);
     box-shadow: 0px 6px 5px rgba(60, 60, 60, 0.3);

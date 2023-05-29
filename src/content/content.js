@@ -6,6 +6,12 @@ import quotePanel, {
 const pageContent = () => {
     const content = document.querySelector(".content");
 
+    const openingLine = document.createElement("div");
+    openingLine.classList.add("opening-line");
+    openingLine.textContent =
+        "Established in 1974 by two brothers looking to bring world-class food to the area, Baker's Dozen has been producing quality baked goods for decades. We use only fresh, locally-sourced ingredients to provide unmatched taste for an affordable price. Check out our menu and see what all the fuss is about.";
+    content.appendChild(openingLine);
+
     const quoteContainer = document.createElement("div");
     quoteContainer.classList.add("quote-container");
     content.appendChild(quoteContainer);
