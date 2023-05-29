@@ -1,12 +1,15 @@
 const homepageImagePanel = (img) => {
-    const panel = document.createElement("img");
-    panel.classList.add("homepage-image-panel");
-    panel.setAttribute("src", img);
+    const panelImage = document.createElement("div");
+    panelImage.classList.add("homepage-image-panel");
+    panelImage.style.backgroundImage = `url(${img})`;
 
-    return panel;
+    return panelImage;
 };
 const changeHomepageImagePanelImage = (e, img) => {
-    e.setAttribute("src", img);
+    e.style.backgroundImage = img;
+};
+const homepageImagePanelOffsetImage = (e, pos) => {
+    e.style.backgroundPosition = pos;
 };
 export default homepageImagePanel;
-export { changeHomepageImagePanelImage };
+export { changeHomepageImagePanelImage, homepageImagePanelOffsetImage };

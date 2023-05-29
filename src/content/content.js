@@ -2,6 +2,13 @@ import quotePanel, {
     quotePanelUpdateQuoteText,
     quotePanelUpdateAuthor,
 } from "./quote-panel/quote-panel.js";
+import homepageImagePanel, {
+    homepageImagePanelChangeImage,
+    homepageImagePanelOffsetImage,
+} from "./homepage-image-panel/homepage-image-panel.js";
+import cinnamonRolls from "./../img/beth-macdonald-V6LEV6CBVLw-unsplash.jpg";
+import croissants from "./../img/conor-brown-sqkXyyj4WdE-unsplash.jpg";
+import cheesecake from "./../img/waranya-mooldee-TB0Ao4CQRqc-unsplash.jpg";
 
 const pageContent = () => {
     const content = document.querySelector(".content");
@@ -11,6 +18,20 @@ const pageContent = () => {
     openingLine.textContent =
         "Established in 1974 by two brothers looking to bring world-class food to the area, Baker's Dozen has been producing quality baked goods for decades. We use only fresh, locally-sourced ingredients to provide unmatched taste for an affordable price. Check out our menu and see what all the fuss is about.";
     content.appendChild(openingLine);
+
+    const imageContainer = document.createElement("div");
+    imageContainer.classList.add("homepage-image-container");
+    content.appendChild(imageContainer);
+
+    const image1 = homepageImagePanel(cinnamonRolls);
+    imageContainer.appendChild(image1);
+
+    const image2 = homepageImagePanel(croissants);
+    imageContainer.appendChild(image2);
+
+    const image3 = homepageImagePanel(cheesecake);
+    homepageImagePanelOffsetImage(image3, "bottom 44% right 50%");
+    imageContainer.appendChild(image3);
 
     const quoteContainer = document.createElement("div");
     quoteContainer.classList.add("quote-container");
@@ -27,7 +48,7 @@ const pageContent = () => {
     const quote2 = quotePanel();
     quotePanelUpdateQuoteText(
         quote2,
-        '"If someone were to ask me: "Where is the best bakery in town?", I\'d tell them it was here. Baker\'s Dozen has been making the same high-quality goods for decades."'
+        '"If someone were to ask me: "Where is the best bakery in town?", I\'d tell them it was here. Baker\'s Dozen has been making the same great food since I moved to the area 20 years ago."'
     );
     quotePanelUpdateAuthor(quote2, "Thomas Lee");
     quoteContainer.appendChild(quote2);
