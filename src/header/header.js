@@ -1,7 +1,14 @@
 import headerNavButton from "./header-nav-button.js";
 
+let navButtons = [];
+
 const pageHeader = () => {
     const header = document.querySelector(".header");
+
+    navButtons = [];
+    while (header.firstChild) {
+        header.removeChild(header.lastChild);
+    }
 
     const companyName = document.createElement("h1");
     companyName.classList.add("company-name");
@@ -13,19 +20,22 @@ const pageHeader = () => {
     navBar.classList.add("navigation-bar");
     header.appendChild(navBar);
 
-    const buttonHome = headerNavButton();
-    buttonHome.classList.add("nav-button-home");
-    buttonHome.textContent = "Home";
-    navBar.appendChild(buttonHome);
+    navButtons.push(headerNavButton("Home", ["nav-button-home"]));
+    navButtons.push(headerNavButton("Menu", ["nav-button-menu"]));
+    navButtons.push(headerNavButton("Contact", ["nav-button-contact"]));
 
-    const buttonMenu = headerNavButton();
-    buttonMenu.classList.add("nav-button-menu");
-    buttonMenu.textContent = "Menu";
-    navBar.appendChild(buttonMenu);
+    for (let i = 0; i < navButtons.length; i++) {
+        navButtons[i].addEventListener("click", () => navButtonClicked(i));
+    }
 
-    const buttonContact = headerNavButton();
-    buttonContact.classList.add("nav-button-contact");
-    buttonContact.textContent = "Contact";
-    navBar.appendChild(buttonContact);
+    navButtons.forEach((button) => {
+        navBar.appendChild(button);
+    });
+};
+const navButtonClicked = (index) => {
+    navButtons.forEach((button) => {
+        button.classList.remove("current");
+    });
+    if (index < navButtons.length) navButtons[index].classList.add("current");
 };
 export default pageHeader;

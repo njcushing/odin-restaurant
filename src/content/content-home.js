@@ -10,7 +10,7 @@ import cinnamonRolls from "./../img/beth-macdonald-V6LEV6CBVLw-unsplash.jpg";
 import croissants from "./../img/conor-brown-sqkXyyj4WdE-unsplash.jpg";
 import cheesecake from "./../img/waranya-mooldee-TB0Ao4CQRqc-unsplash.jpg";
 
-const pageContent = () => {
+const pageContentHome = () => {
     const content = document.querySelector(".content");
 
     const openingLine = document.createElement("div");
@@ -61,4 +61,4 @@ const pageContent = () => {
     quotePanelUpdateAuthor(quote3, "Simon Miller");
     quoteContainer.appendChild(quote3);
 };
-export default pageContent;
+export default pageContentHome;
