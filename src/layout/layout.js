@@ -1,6 +1,6 @@
 const pageLayout = () => {
     const page = document.createElement("div");
-    page.id = "#page";
+    page.id = "page";
     document.body.appendChild(page);
 
     const header = document.createElement("div");

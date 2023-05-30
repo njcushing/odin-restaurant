@@ -41,7 +41,9 @@ body {
 
 #page { 
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: repeat(2, auto);
+    width: inherit;
+    height: 100vh;
 }
 
 .header {
@@ -92,7 +94,8 @@ body {
 .content {
     grid-area: 2 / 1 / -1 / -1;
     display: grid;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    align-content: start;
     background-color: #f8e8e8;
     height: inherit;
     z-index: 100;
