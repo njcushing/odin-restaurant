@@ -1,4 +1,6 @@
-const pageLayout = () => {
+import drawHeader, { currentTab } from "./../header/header.js";
+
+const drawPage = () => {
     const page = document.createElement("div");
     page.id = "page";
     document.body.appendChild(page);
@@ -10,5 +12,7 @@ const pageLayout = () => {
     const content = document.createElement("div");
     content.classList.add("content");
     page.appendChild(content);
+
+    drawHeader();
 };
-export default pageLayout;
+export default drawPage;
