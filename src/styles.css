@@ -89,3 +89,7 @@ body {
 .header .navigation-bar button.current {
     background-color: rgb(253, 185, 36);
 }
+
+.content {
+    grid-area: 2 / 1 / -1 / -1;
+}

@@ -1,12 +1,4 @@
-:root {
-    --homepage-panel-max-columns: 3;
-    --homepage-panel-width: 400px;
-    --homepage-panel-gap: 20px;
-    --homepage-panel-border-radius: 10px;
-}
-
 .content {
-    grid-area: 2 / 1 / -1 / -1;
     display: grid;
     grid-template-rows: repeat(3, auto);
     align-content: start;

@@ -1,14 +1,8 @@
-import imagePanel, {
-    imagePanelChangeImage,
-    imagePanelOffsetImage,
-} from "./image-panel/image-panel.js";
-import menuItemPanel from "./menu-item-panel/menu-item-panel.js";
+import imagePanel from "./image-panel.js";
+import menuItemPanel from "./menu-item-panel.js";
 import cinnamonRolls from "./../img/beth-macdonald-V6LEV6CBVLw-unsplash.jpg";
 import croissants from "./../img/conor-brown-sqkXyyj4WdE-unsplash.jpg";
 import cheesecake from "./../img/waranya-mooldee-TB0Ao4CQRqc-unsplash.jpg";
-import "./content-menu-styles.css";
-
-let imagePanelClasses = ["menu-image-panel"];
 
 let menu = [];
 const menuItem = (panel, image) => {
@@ -17,8 +11,9 @@ const menuItem = (panel, image) => {
 
 menuItem(
     menuItemPanel("Cheesecake", "testDesc", "340", "120"),
-    imagePanel(cheesecake, imagePanelClasses)
+    imagePanel(cheesecake)
 );
+menu[menu.length - 1].image.setOffset("bottom 44% right 50%");
 
 const pageContentMenu = () => {
     const content = document.querySelector(".content");
@@ -29,12 +24,12 @@ const pageContentMenu = () => {
 
     for (let i = 0; i < menu.length; i++) {
         if (i % 2 === 0) {
-            itemContainer.appendChild(menu[i].image);
+            itemContainer.appendChild(menu[i].image.e);
             itemContainer.appendChild(menu[i].panel.e);
             continue;
         }
         itemContainer.appendChild(menu[i].panel.e);
-        itemContainer.appendChild(menu[i].image);
+        itemContainer.appendChild(menu[i].image.e);
     }
 };
 export default pageContentMenu;

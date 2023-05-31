@@ -1,6 +1,15 @@
-const menuItemPanel = (itemName, itemDescription, itemCalories, itemPrice) => {
+const menuItemPanel = (
+    itemName,
+    itemDescription,
+    itemCalories,
+    itemPrice,
+    classes = []
+) => {
     const e = document.createElement("div");
     e.classList.add("menu-item-panel");
+    classes.forEach((cls) => {
+        e.classList.add(cls);
+    });
 
     const name = document.createElement("h2");
     name.classList.add("menu-item-panel-name");
