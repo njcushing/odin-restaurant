@@ -6,6 +6,9 @@ import menuItemPanel from "./menu-item-panel/menu-item-panel.js";
 import cinnamonRolls from "./../img/beth-macdonald-V6LEV6CBVLw-unsplash.jpg";
 import croissants from "./../img/conor-brown-sqkXyyj4WdE-unsplash.jpg";
 import cheesecake from "./../img/waranya-mooldee-TB0Ao4CQRqc-unsplash.jpg";
+import "./content-menu-styles.css";
+
+let imagePanelClasses = ["menu-image-panel"];
 
 let menu = [];
 const menuItem = (panel, image) => {
@@ -14,7 +17,7 @@ const menuItem = (panel, image) => {
 
 menuItem(
     menuItemPanel("Cheesecake", "testDesc", "340", "120"),
-    imagePanel(cheesecake)
+    imagePanel(cheesecake, imagePanelClasses)
 );
 
 const pageContentMenu = () => {

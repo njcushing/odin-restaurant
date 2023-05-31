@@ -9,6 +9,9 @@ import imagePanel, {
 import cinnamonRolls from "./../img/beth-macdonald-V6LEV6CBVLw-unsplash.jpg";
 import croissants from "./../img/conor-brown-sqkXyyj4WdE-unsplash.jpg";
 import cheesecake from "./../img/waranya-mooldee-TB0Ao4CQRqc-unsplash.jpg";
+import "./content-home-styles.css";
+
+const imagePanelClasses = ["homepage-image-panel"];
 
 const pageContentHome = () => {
     const content = document.querySelector(".content");
@@ -23,13 +26,13 @@ const pageContentHome = () => {
     imageContainer.classList.add("image-container");
     content.appendChild(imageContainer);
 
-    const image1 = imagePanel(cinnamonRolls);
+    const image1 = imagePanel(cinnamonRolls, imagePanelClasses);
     imageContainer.appendChild(image1);
 
-    const image2 = imagePanel(croissants);
+    const image2 = imagePanel(croissants, imagePanelClasses);
     imageContainer.appendChild(image2);
 
-    const image3 = imagePanel(cheesecake);
+    const image3 = imagePanel(cheesecake, imagePanelClasses);
     imagePanelOffsetImage(image3, "bottom 44% right 50%");
     imageContainer.appendChild(image3);
 
