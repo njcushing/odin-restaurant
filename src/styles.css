@@ -114,14 +114,14 @@ body {
     padding: 20px;
 }
 
-.homepage-image-container {
+.image-container {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
     gap: 20px;
 }
 
-.homepage-image-panel {
+.image-panel {
     position: relative;
     width: 324px;
     height: 170px;

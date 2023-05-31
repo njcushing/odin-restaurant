@@ -2,10 +2,10 @@ import quotePanel, {
     quotePanelUpdateQuoteText,
     quotePanelUpdateAuthor,
 } from "./quote-panel/quote-panel.js";
-import homepageImagePanel, {
-    homepageImagePanelChangeImage,
-    homepageImagePanelOffsetImage,
-} from "./homepage-image-panel/homepage-image-panel.js";
+import imagePanel, {
+    imagePanelChangeImage,
+    imagePanelOffsetImage,
+} from "./image-panel/image-panel.js";
 import cinnamonRolls from "./../img/beth-macdonald-V6LEV6CBVLw-unsplash.jpg";
 import croissants from "./../img/conor-brown-sqkXyyj4WdE-unsplash.jpg";
 import cheesecake from "./../img/waranya-mooldee-TB0Ao4CQRqc-unsplash.jpg";
@@ -20,17 +20,17 @@ const pageContentHome = () => {
     content.appendChild(openingLine);
 
     const imageContainer = document.createElement("div");
-    imageContainer.classList.add("homepage-image-container");
+    imageContainer.classList.add("image-container");
     content.appendChild(imageContainer);
 
-    const image1 = homepageImagePanel(cinnamonRolls);
+    const image1 = imagePanel(cinnamonRolls);
     imageContainer.appendChild(image1);
 
-    const image2 = homepageImagePanel(croissants);
+    const image2 = imagePanel(croissants);
     imageContainer.appendChild(image2);
 
-    const image3 = homepageImagePanel(cheesecake);
-    homepageImagePanelOffsetImage(image3, "bottom 44% right 50%");
+    const image3 = imagePanel(cheesecake);
+    imagePanelOffsetImage(image3, "bottom 44% right 50%");
     imageContainer.appendChild(image3);
 
     const quoteContainer = document.createElement("div");
