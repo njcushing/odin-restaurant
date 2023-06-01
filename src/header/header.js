@@ -4,7 +4,7 @@ import contentMenu from "./../content/content-menu.js";
 import contentContact from "./../content/content-contact.js";
 
 let navButtons = [];
-let currentTab = 0;
+let currentTab = 1;
 
 const drawHeader = () => {
     const header = document.querySelector(".header");

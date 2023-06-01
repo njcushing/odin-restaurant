@@ -1,9 +1,7 @@
-.content {
+.home-content-container {
     display: grid;
     grid-template-rows: repeat(3, auto);
     align-content: start;
-    background-color: #f8e8e8;
-    height: inherit;
 }
 
 .opening-line {

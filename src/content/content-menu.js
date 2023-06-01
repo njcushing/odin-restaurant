@@ -37,7 +37,7 @@ const contentMenu = () => {
         if (!content) return;
 
         container = document.createElement("div");
-        container.classList.add("menu-item-container");
+        container.classList.add("menu-content-container");
         content.appendChild(container);
 
         for (let i = 0; i < menu.length; i++) {
@@ -49,8 +49,6 @@ const contentMenu = () => {
             container.appendChild(menu[i].panel.e);
             container.appendChild(menu[i].image.e);
         }
-
-        content.appendChild(container);
 
         styles.use();
     };

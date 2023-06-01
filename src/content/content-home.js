@@ -27,6 +27,8 @@ const contentHome = () => {
         if (!content) return;
 
         container = document.createElement("div");
+        container.classList.add("home-content-container");
+        content.appendChild(container);
 
         openingLine = document.createElement("div");
         openingLine.classList.add("opening-line");
@@ -69,8 +71,6 @@ const contentHome = () => {
             "Simon Miller"
         );
         quoteContainer.appendChild(quote3.e);
-
-        content.appendChild(container);
 
         styles.use();
     };
