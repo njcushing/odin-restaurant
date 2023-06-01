@@ -29,7 +29,7 @@ const contentContact = () => {
         const openingTimes = openingTimesPanel();
         openingTimes.setDayTimes(0, "07:30am", "21:00pm");
         openingTimes.setDayTimes(1, "07:30am", "21:00pm");
-        openingTimes.setDayTimes(2, "08:30am", "20:00pm");
+        openingTimes.setDayClosed(2);
         openingTimes.setDayTimes(3, "07:30am", "21:00pm");
         openingTimes.setDayTimes(4, "07:30am", "21:00pm");
         openingTimes.setDayTimes(5, "06:00am", "22:30pm");

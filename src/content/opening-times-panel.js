@@ -8,10 +8,16 @@ const openingTimesPanel = (classes = []) => {
     const setDayTimes = (day, openingTime, closingTime) => {
         if (day < 0 || day > 6) return;
         days[day].childNodes[1].textContent = openingTime;
+        days[day].childNodes[2].textContent = "-";
         days[day].childNodes[3].textContent = closingTime;
     };
 
-    const setDayClosed = (day) => {};
+    const setDayClosed = (day) => {
+        if (day < 0 || day > 6) return;
+        days[day].childNodes[1].textContent = "Closed";
+        days[day].childNodes[2].textContent = "";
+        days[day].childNodes[3].textContent = "";
+    };
 
     let days = [];
     for (let i = 0; i < 7; i++) {
