@@ -40,13 +40,22 @@ const contentHome = () => {
         imageContainer.classList.add("image-container");
         container.appendChild(imageContainer);
 
-        image1 = imagePanel(cinnamonRolls, "test");
+        image1 = imagePanel(
+            cinnamonRolls,
+            "Many baked cinnamon rolls in a tray."
+        );
         imageContainer.appendChild(image1.e);
 
-        image2 = imagePanel(croissants);
+        image2 = imagePanel(
+            croissants,
+            "A number of buttery, flaky croissants laid out on baking paper."
+        );
         imageContainer.appendChild(image2.e);
 
-        image3 = imagePanel(cheesecake);
+        image3 = imagePanel(
+            cheesecake,
+            "A slice of cheesecake with blueberries on top."
+        );
         image3.setOffset("bottom 44% right 50%");
         imageContainer.appendChild(image3.e);
 
