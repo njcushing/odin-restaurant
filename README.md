@@ -1,4 +1,10 @@
 # odin-restaurant
+A restaurant site made as part of The Odin Project's 'JavaScript' course.
+
+- This project was created as an exercise in using JavaScript modules (imports and exports) and Webpack.
+- The site consists of three tabs, changed by clicking navigation buttons. This will change the displayed content accordingly.
+- The navigation buttons have styling to indicate which tab you're currently on.
+- Each tab is created by importing information from other modules and using those modules to create images and information panels for quotes, menu items and more.
 
 Photo Credits:
 
