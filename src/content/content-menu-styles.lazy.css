@@ -8,13 +8,6 @@
     gap: 20px;
 }
 
-.image-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 40px;
-}
-
 .image-panel {
     position: relative;
     width: 324px;

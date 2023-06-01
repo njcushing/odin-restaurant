@@ -40,7 +40,7 @@ const contentHome = () => {
         imageContainer.classList.add("image-container");
         container.appendChild(imageContainer);
 
-        image1 = imagePanel(cinnamonRolls);
+        image1 = imagePanel(cinnamonRolls, "test");
         imageContainer.appendChild(image1.e);
 
         image2 = imagePanel(croissants);
