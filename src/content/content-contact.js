@@ -1,4 +1,5 @@
 import openingTimesPanel from "./opening-times-panel.js";
+import contactInfoPanel from "./contact-info-panel.js";
 import styles from "./content-contact-styles.lazy.css";
 
 let drawnState = false;
@@ -36,13 +37,26 @@ const contentContact = () => {
         openingTimes.setDayTimes(6, "09:00am", "17:00pm");
         openingTimesContainer.appendChild(openingTimes.e);
 
-        const addressContainer = document.createElement("div");
-        addressContainer.classList.add("address-container");
-        container.appendChild(addressContainer);
-
         const contactInfoContainer = document.createElement("div");
         contactInfoContainer.classList.add("contact-information-container");
         container.appendChild(contactInfoContainer);
+
+        const contactInfoTitle = document.createElement("h2");
+        contactInfoTitle.classList.add("contact-information-title");
+        contactInfoTitle.textContent = "Contact Information";
+        contactInfoContainer.appendChild(contactInfoTitle);
+
+        const contactInfo = contactInfoPanel(
+            "01632 960910",
+            "inquiries@bakersdozen.co.uk",
+            45,
+            "High Street",
+            "Hometown",
+            "Electric City",
+            "United Kingdom",
+            "FL21 3LD"
+        );
+        contactInfoContainer.appendChild(contactInfo.e);
 
         styles.use();
     };

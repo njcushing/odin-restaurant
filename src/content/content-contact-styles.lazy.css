@@ -8,14 +8,16 @@
     gap: 20px;
 }
 
-.opening-times-container {
+.opening-times-container,
+.contact-information-container {
     border-radius: 10px;
     background-color: rgb(250, 250, 250);
     box-shadow: 0px 6px 5px rgba(60, 60, 60, 0.3);
     padding: 20px 60px;
 }
 
-.opening-times-title {
+.opening-times-title,
+.contact-information-title {
     text-align: center;
     padding-bottom: 10px;
 }
@@ -28,6 +30,21 @@
     font-size: 1.0rem;
 }
 
-.opening-times-panel-day .opening-times-panel-day-name {
+.contact-information-panel-phone-container,
+.contact-information-panel-email-container,
+.contact-information-panel-address-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 1ch;
+    font-size: 1.0rem;
+}
+
+.opening-times-panel-day-name,
+.contact-information-panel-phone-title,
+.contact-information-panel-email-title,
+.contact-information-panel-address-title {
     font-weight: bold;
 }
+
+
