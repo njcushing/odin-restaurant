@@ -1,4 +1,4 @@
-const pageContentContact = () => {
-    const content = document.querySelector(".content");
-};
-export default pageContentContact;
+import styles from "./content-contact-styles.lazy.css";
+
+const contentContact = () => {};
+export default contentContact;

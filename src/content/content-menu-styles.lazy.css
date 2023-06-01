@@ -1,0 +1,22 @@
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    background-color: #f8e8e8;
+    height: inherit;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.image-panel {
+    position: relative;
+    width: 324px;
+    height: 170px;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0px 6px 5px rgba(60, 60, 60, 0.3);
+}
